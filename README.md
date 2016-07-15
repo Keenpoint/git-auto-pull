@@ -16,7 +16,7 @@ You should have a git post-receive hook (see https://git-scm.com/book/it/v2/Cust
 
 curl here.the.ip.of.the.machine:1337
 ```
-where 1337 listened by the auto-pull.
+where 1337 is the port listened by the auto-pull.
 
 
 #### Run it

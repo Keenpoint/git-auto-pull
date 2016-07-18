@@ -2,17 +2,20 @@ var http = require("http");
 var exec = require("child_process").exec;
 var path = require('path');
 
+const projectPath = process.argv[2];
+const absolutePath = path.join(__dirname, projectPath);
+
 var execute = function(callback) {
-    exec(`cd ${path.join(__dirname, process.argv[2])} && git pull`, function(e, stdout, stderr) {
-        console.log(stdout);
-        callback(stdout + "\n");
+    exec(`cd ${absolutePath} && git pull`, function(err, stdout, stderr) {
+        callback(err, `stdout: ${stdout} \n stderr: ${stderr}`);
     });
 }
 
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
 
-    execute(function(result) {
+    execute(function(err, result) {
+        if (err) console.error(`exec error: ${err}`);
         res.end(result);
     });
 

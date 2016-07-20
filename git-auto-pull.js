@@ -7,7 +7,7 @@ const absolutePath = path.join(__dirname, projectPath);
 
 var execute = function(callback) {
     exec(`cd ${absolutePath} && git pull`, function(err, stdout, stderr) {
-        callback(err, `stdout: ${stdout} \n stderr: ${stderr}`);
+        callback(err, ` stdout: ${stdout} \n stderr: ${stderr}`);
     });
 }
 
@@ -16,7 +16,8 @@ http.createServer(function (req, res) {
 
     execute(function(err, result) {
         if (err) console.error(`exec error: ${err}`);
-        res.end(result);
+        console.log(result);
+        res.end();
     });
 
 }).listen(1337);

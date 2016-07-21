@@ -1,7 +1,7 @@
 {
   "name": "git-auto-pull",
   "version": "1.0.2",
-  "description": "Little javascript utility to automatically do a `git pull` on a server when something new is pushed to the git repository",
+  "description": "Little javascript utility to automatically do a 'git pull' on a server when something new is pushed to the git repository",
   "main": "git-auto-pull.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

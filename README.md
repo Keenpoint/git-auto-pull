@@ -3,16 +3,18 @@
 ## What is it ?
 
 
-Git-auto-pull is a little javascript utility to automatically do a `git pull`  on a server when something new is pushed to the git repository.
+Git-auto-pull is a little javascript utility to automatically do a 'git pull'  on a server when something new is pushed to the git repository.
 
 
 ## Usage
 
 #### Get it
 
+
 ```
 npm install git-auto-pull
 ```
+
 or
 
 ```

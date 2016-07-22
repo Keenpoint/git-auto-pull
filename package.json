@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Keenpoint/git-auto-pull/issues"
   },
-  "homepage": "https://github.com/Keenpoint/git-auto-pull#readme"
+  "homepage": "https://github.com/Keenpoint/git-auto-pull#readme",
+  "dependencies": {
+    "async": "^2.0.0"
+  }
 }

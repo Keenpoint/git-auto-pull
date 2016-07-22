@@ -32,8 +32,8 @@ http.createServer(function (req, res) {
 
 	updateProject((err, result) => {
 	    if(err) console.error(`exec error: ${err}`);
-        if(result) console.log(result);
-        res.end();
+	    if(result) console.log(result);
+		res.end();
 	});
 
 }).listen(1337);

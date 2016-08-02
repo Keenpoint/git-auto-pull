@@ -10,7 +10,7 @@ const cmds = ["git pull"].concat(process.argv.filter((arg, index) => { return in
 
 const execCmds = cmds.map((cmd) => {
 	return function(callback) {
-		exec(`cd ${absolutePath} && ${cmd}`, (err, stdout, stderr) => {
+		exec(`cd ${absolutePath} && ${cmd}`, {maxBuffer: 1024 * 600}, (err, stdout, stderr) => {
 			if(err) return callback(err);
 			callback(null, `--- ${cmd} ---:\n stdout: ${stdout} \n stderr: ${stderr}\n`);
 		});

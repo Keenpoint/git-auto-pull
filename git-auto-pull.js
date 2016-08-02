@@ -38,7 +38,7 @@ http.createServer(function (req, res) {
 	    }
 	    if(result) {
 	    	console.log(result);
-	    	reponse += `\n ${result}`;
+	    	response += `\n ${result}`;
 	    }
 		res.end(response);
 	});

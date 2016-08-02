@@ -40,7 +40,7 @@ http.createServer(function (req, res) {
 	    	console.log(result);
 	    	reponse += `\n ${result}`;
 	    }
-		res.send(response);
+		res.end(response);
 	});
 
 }).listen(1337);

@@ -30,10 +30,17 @@ http.createServer(function (req, res) {
     res.writeHead(200, {"Content-Type": "text/plain"});
     console.log("An event has been detected on the listened port: starting execution...")
 
-	updateProject((err, result) => {
-	    if(err) console.error(`exec error: ${err}`);
-	    if(result) console.log(result);
-		res.end();
+	updateProject((e, result) => {
+		let response = "";
+	    if(e) {
+	    	console.error(`exec error: ${e}`);
+	    	response += `exec error: ${e}`;
+	    }
+	    if(result) {
+	    	console.log(result);
+	    	reponse += `\n ${result}`;
+	    }
+		res.send(response);
 	});
 
 }).listen(1337);

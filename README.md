@@ -22,7 +22,7 @@ git clone https://github.com/Keenpoint/git-auto-pull
 
 #### Prepare it
 
-You should create a git post-receive hook (see https://git-scm.com/book/it/v2/Customizing-Git-Git-Hooks) in the hook directory of your git repository. It could be like this:
+You should create a git post-receive hook (see https://git-scm.com/book/it/v2/Customizing-Git-Git-Hooks) in the hook directory of __your git repository__. It could be like this:
 
 ```sh
 #!/bin/sh
